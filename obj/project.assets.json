@@ -100,6 +100,16 @@
         "runtime": {
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
+      },
+      "DynamoDB.Libs/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/DynamoDB.Libs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DynamoDB.Libs.dll": {}
+        }
       }
     }
   },
@@ -281,13 +291,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "DynamoDB.Libs/1.0.0": {
+      "type": "project",
+      "path": "../DynamoDB.Libs/DynamoDB.Libs.csproj",
+      "msbuildProject": "../DynamoDB.Libs/DynamoDB.Libs.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AWSSDK.DynamoDBv2 >= 3.5.4.30",
       "AWSSDK.Extensions.NETCore.Setup >= 3.3.101",
-      "AWSSDK.S3 >= 3.5.8.7"
+      "AWSSDK.S3 >= 3.5.8.7",
+      "DynamoDB.Libs >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -321,7 +337,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\GitProjects\\DynamoDB.Libs\\DynamoDB.Libs.csproj": {
+              "projectPath": "E:\\GitProjects\\DynamoDB.Libs\\DynamoDB.Libs.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

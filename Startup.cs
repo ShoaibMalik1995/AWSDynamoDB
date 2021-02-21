@@ -12,6 +12,8 @@ using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Amazon.DynamoDBv2;
 using Amazon.S3;
+using DynamoDB.Libs.DynamoDB;
+using DynamoDB.Libs.DynamoDB.Interfaces;
 
 namespace AWSDynamoDB
 {
@@ -40,7 +42,8 @@ namespace AWSDynamoDB
             Environment.SetEnvironmentVariable("AWS_REGION", Configuration["AWS:Region"]);
             Environment.SetEnvironmentVariable("AWS_ACCESS_KEY_ID", Configuration["AWS:AccessKey"]);
             Environment.SetEnvironmentVariable("AWS_SECRET_ACCESS_KEY", Configuration["AWS:SecretKey"]);
-            
+
+            services.AddSingleton<IDynamoDBExample, DynamoDBExample>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
