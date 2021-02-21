@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "x0P4C5xJ/n61xddeVHA8R6TS5j/KStyPEl3YiJuVT6HLtMPwGwjrazRcSt6GI869kaPUeKSY29CDOvgmik87UA==",
+  "dgSpecHash": "XjlBMzaAcCgu2vkmQmCNIugq4Nz0eX9BYuKqAF2bBgLfFuCpK76P0QddW+ohOp5xzgG5HK7/SA4fpTJNI8m4AQ==",
   "success": true,
   "projectFilePath": "E:\\GitProjects\\AWSDynamoDB\\AWSDynamoDB.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\HI\\.nuget\\packages\\awssdk.core\\3.5.3.1\\awssdk.core.3.5.3.1.nupkg.sha512",
+    "C:\\Users\\HI\\.nuget\\packages\\awssdk.dynamodbv2\\3.5.4.30\\awssdk.dynamodbv2.3.5.4.30.nupkg.sha512",
+    "C:\\Users\\HI\\.nuget\\packages\\awssdk.extensions.netcore.setup\\3.3.101\\awssdk.extensions.netcore.setup.3.3.101.nupkg.sha512",
+    "C:\\Users\\HI\\.nuget\\packages\\awssdk.s3\\3.5.8.7\\awssdk.s3.3.5.8.7.nupkg.sha512",
+    "C:\\Users\\HI\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.0.0\\microsoft.extensions.configuration.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\HI\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\HI\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\HI\\.nuget\\packages\\microsoft.extensions.primitives\\2.0.0\\microsoft.extensions.primitives.2.0.0.nupkg.sha512",
+    "C:\\Users\\HI\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.4.0\\system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
+  ],
   "logs": []
 }
