@@ -21,9 +21,10 @@ namespace AWSDynamoDB.Controllers
         #endregion
 
         #region Methods
-        public IActionResult CreateDynamoDBTable()
+        [HttpGet("CreateTable")]
+        public async Task<IActionResult> CreateDynamoDBTable()
         {
-
+            await this._dynamoDBExample.CreateDynamoDBTable();
             return Ok();
         }
         #endregion

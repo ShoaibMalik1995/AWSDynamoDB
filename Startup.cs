@@ -9,7 +9,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using System.IO;
-using Microsoft.AspNetCore.Mvc;
 using Amazon.DynamoDBv2;
 using Amazon.S3;
 using DynamoDB.Libs.DynamoDB;
@@ -33,7 +32,9 @@ namespace AWSDynamoDB
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddControllers(options => options.EnableEndpointRouting = false);
+            services.AddOptions();
+            services.AddSwaggerDocument(configure => configure.Title = "Aws DynamoDB Demo");
 
             services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
             services.AddAWSService<IAmazonS3>();
@@ -53,11 +54,16 @@ namespace AWSDynamoDB
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
-            app.UseMvc(); ;
-            app.Run(async (context) =>
+            app.UseRouting();
+            app.UseMvc();
+            app.UseEndpoints(endpoints =>
             {
-                await context.Response.WriteAsync("Server started !");
+                endpoints.MapControllerRoute(
+                    name: "defaultApi",
+                    pattern: "api/{controller}/{action=Index}/{id?}");
             });
         }
     }
